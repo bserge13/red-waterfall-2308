@@ -1,0 +1,9 @@
+<h1><%= @facade.members.count %> Results </h1>
+<% @facade.members.each do |member| %>
+    <ul class="member">
+  <li class="name"><%= member.name %></li>
+  <li class="allies"><%= member.allies %></li>
+  <li class="enemies"><%= member.enemies %></li>
+  <li class="affiliations"><%= member.affiliations %></li>
+</ul>
+<% end %>

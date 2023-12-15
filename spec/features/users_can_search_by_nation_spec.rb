@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'user searches for characters' do 
-  it 'returns all characters of a specified nation' do 
+  it 'returns all characters of a specified nation', :vcr do 
     # As a user,
     # When I visit "/"
     visit '/'
