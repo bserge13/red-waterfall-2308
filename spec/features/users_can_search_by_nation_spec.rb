@@ -23,6 +23,10 @@ RSpec.describe 'user searches for characters' do
     expect(page).to have_content('Allies:').exactly(25).times
     expect(page).to have_content('Enemies:').exactly(25).times
     expect(page).to have_content('Affiliation:').exactly(25).times
-
+    
+    expect(page).to have_content('Name: Fire Navy officer')
+    expect(page).to have_content('Allies: ["Admiral"]')
+    expect(page).to have_content('Affiliation: Fire Nation Navy')
+    expect(page).to have_content('Enemies: None')
   end
 end
