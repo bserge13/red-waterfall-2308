@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index 
-    @facade = SearchFacade.new(params[:nation]) 
+    @members = SearchFacade.members_by_nation(params[:nation]) 
+    require 'pry'; binding.pry
   end
 end

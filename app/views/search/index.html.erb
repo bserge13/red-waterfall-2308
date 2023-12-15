@@ -1,9 +1,10 @@
-<h1><%= @facade.members.count %> Results </h1>
-<% @facade.members.each do |member| %>
+<h1><%= @members.count %> Results for <%=  %></h1>
+<% @members.each do |member| %>
     <ul class="member">
-  <li class="name"><%= member.name %></li>
-  <li class="allies"><%= member.allies %></li>
-  <li class="enemies"><%= member.enemies %></li>
-  <li class="affiliations"><%= member.affiliations %></li>
+  <li class="photo"> <img src= <%= member.photo %>></li>
+  <li class="name"> Name: <%= member.name %></li>
+  <li class="allies"> Allies: <%= member.allies %></li>
+  <li class="enemies"> Enemies: <%= member.enemies %></li>
+  <li class="affiliation"> Affiliation: <%= member.affiliation %></li>
 </ul>
 <% end %>
