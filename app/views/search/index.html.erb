@@ -1,10 +1,11 @@
-<h1><%= @members.count %> Results for <%=  %></h1>
-<% @members.each do |member| %>
+<h1><%= @nation.gsub('+', " ").titleize %></h1>
+<h2> Total Members: <%= @members.count %></h2>
+<% @members.first(25).each do |member| %>
     <ul class="member">
-  <li class="photo"> <img src= <%= member.photo %>></li>
-  <li class="name"> Name: <%= member.name %></li>
-  <li class="allies"> Allies: <%= member.allies %></li>
-  <li class="enemies"> Enemies: <%= member.enemies %></li>
-  <li class="affiliation"> Affiliation: <%= member.affiliation %></li>
+  <p class="photo"> <img src= <%= member.photo %>></p>
+  <p class="name"> Name: <%= member.name %></p>
+  <p class="allies"> Allies: <%= member.allies %></p>
+  <p class="enemies"> Enemies: <%= member.enemies %></p>
+  <p class="affiliation"> Affiliation: <%= member.affiliation %></p>
 </ul>
 <% end %>
